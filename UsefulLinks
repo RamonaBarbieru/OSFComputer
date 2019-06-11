@@ -1,0 +1,38 @@
+Dev Training: https://osfsupport.atlassian.net/wiki/spaces/OCCT/pages/69769006/SFDC+Developer+Training
+
+https://help.salesforce.com/articleView?id=optimizer_introduction.htm&type=5
+all let's review these again, see which of those can become improvement points for our components: https://developer.salesforce.com/blogs/developer-relations/2017/04/lightning-components-performance-best-practices.html
+salesforce lightning inspector
+
+
+
+https://help.salesforce.com/articleView?id=000250291&language=en_US&type=1
+https://www.jitendrazaa.com/blog/salesforce/15-ways-to-improve-performance-of-lightning-components-in-salesforce/
+Salesforce community page optimizer:
+https://chrome.google.com/webstore/detail/salesforce-community-page/alkcnclapbnefkodhbkpifdkceldogka
+
+https://developer.salesforce.com/blogs/developer-relations/2017/04/lightning-components-performance-best-practices.html
+
+    public static void truncateDebug(String stringToDebug) {
+        for (Integer i = 0; i<stringToDebug.length(); i = i + 300) {
+            Integer iEffectiveEnd = ((i + 300)> (stringToDebug.length() - 1) ? stringToDebug.length() : i + 300);
+            System.debug(stringToDebug.substring(i, iEffectiveEnd));
+        }
+    }
+	
+	            /*if (childObjectName.contains('__c')) {
+                childRelationshipName = childObjectName.replace('__c', '__r');
+            } else {
+                childRelationshipName = childObjectName + 's';
+            } */
+			
+			
+query handler:
+
+
+JSON HAndler(2018):
+String childRelationshipName = utils.getChildRelationshipName(record.Id, childObjectName); 	
+String childRelationshipName = utils.getChildRelationshipName(this.childParentRelationsMapping.get(childObjectName));
+
+ this.childParentRelationsMapping.put(mapping.Child_object__r.QualifiedApiName, groupedMappings);
+           
