@@ -1,0 +1,18 @@
+1. New Branch from Developemnt
+2. Make a folder for your local repository and add an src folder into it
+3. Clone project in sourcetree app and make sure the path is the src file previously created. Welkin needs an src folder to regonize resources\
+4. Welkin: new project from sources... create project close do sources and indicate the srouce folder src created previously 
+5. open the dialogue to connect the project ot an organization
+
+https://welkinsuite.com/blog/creating-salesforce-project-from-git-sources/
+
+Thus, open SourceTree and perform the following steps:
+•	Checkout “develop” branch from “Remotes”
+•	Fetch the latest changes from the remote repository
+•	Pull and tick commit
+•	Checkout the branch you are committing to 
+•	Right click “Branches ->develop” and select “Merge develop into current branch”. Check “Commit changes immediately”
+•	Push changes
+
+
+this.JSONGroupedValue = new Map<Decimal, Map<String, Object>>{0 => ((List<Map<String, Object>>)JSONMap.get(mapping.JSON_field__c))[0]};
